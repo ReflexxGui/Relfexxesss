@@ -4,8 +4,8 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Reflexx Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Reflexx"})
 
 OrionLib:MakeNotification({
-	Name = "Title!",
-	Content = "Notification content... what will it say??",
+	Name = "Reflexx Notify",
+	Content = "You succesfully loaded ReflexxHub!",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -17,13 +17,10 @@ local InfoTab = Window:MakeTab({
 })
 
 local Section = InfoTab:AddSection({
-	Name = "Section"
+	Name = "Information"
 })
 
-InfoTab:AddButton({
-	Name = "Button!",
-	Callback = function()
-      		print("button pressed")
-  	end    
+InfoTab:AddLabel("Test1")   
 })
+
 OrionLib:Init()
