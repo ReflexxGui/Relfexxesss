@@ -3,26 +3,27 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "Reflexx Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Reflexx"})
 
-local PlayerTab = Windows:MakeTab({
-  Name = "Player"
-  Icon = "rbxassetid://4483345998",
-  PremiumOnly = false
-)}
- -- Info Players --
-local Section = PlayerTab:AddSection({
-   Name = "Info"
-)}
-
--- Key System --
-
-local Section = GetKeyTab:AddSection({
-	Name = "Key System"
+OrionLib:MakeNotification({
+	Name = "Title!",
+	Content = "Notification content... what will it say??",
+	Image = "rbxassetid://4483345998",
+	Time = 5
 })
 
+local InfoTab = Window:MakeTab({
+	Name = "Information",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-GetKeyTab:AddButton({
-	Name = "Get Key",
+local Section = InfoTab:AddSection({
+	Name = "Section"
+})
+
+InfoTab:AddButton({
+	Name = "Button!",
 	Callback = function()
-      		print("Link Copied")
+      		print("button pressed")
   	end    
 })
+OrionLib:Init()
